@@ -16,6 +16,7 @@ public class App
         Calculator.calculate("2/2");
         Calculator.calculate("2+2");
         Calculator.calculate("2-2");
+        Calculator.calculate("");
 
     }
 

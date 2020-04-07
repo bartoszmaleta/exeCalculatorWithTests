@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class Calculator {
     public static int calculate(String formula) {
+        if (formula.equals("")) {
+            System.out.println("Exception");
+            throw new NumberFormatException();
+        }
+
         int result = 0;
 
         System.out.println("formula = " + formula);

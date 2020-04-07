@@ -1,5 +1,6 @@
 import org.example.Calculator;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,15 +29,15 @@ class CalculatorTest {
 
     @Test
     void testCalculateDivisionByZero() {
-        try {
+        Assertions.assertThrows(ArithmeticException.class, () -> {
             Calculator.calculate("4/0");
-        }
-        catch (ArithmeticException e) {
-            Assert.fail("Exception " + e);
-        }
+        });
+    }
 
-//        ArithmeticException thrown = assertThrows(
-//                ArithmeticException.class,
-//                () -> Calculator.calculate("4/0"));
+    @Test
+    void testCalculateEmptyString() {
+        Assertions.assertThrows(NumberFormatException.class, () -> {
+            Calculator.calculate("");
+        });
     }
 }
