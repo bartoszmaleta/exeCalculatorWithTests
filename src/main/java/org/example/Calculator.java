@@ -11,7 +11,9 @@ public class Calculator {
         String[] formulaSplitted = formula.split("[\\s@*/&.?$+-]+");
         int firstNumber = Integer.parseInt(formulaSplitted[0]);
         int secondNumber = Integer.parseInt(formulaSplitted[1]);
-
+        if (secondNumber == 0) {
+            throw new ArithmeticException();
+        }
 
         System.out.println("Array = " + Arrays.toString(formulaSplitted));
 
