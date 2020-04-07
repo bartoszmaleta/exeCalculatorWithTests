@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Calculator {
     public static int calculate(String formula) {
+
+        //TODO: minus numbers
+
         if (formula.equals("")) {
             System.out.println("Exception");
             throw new NumberFormatException();

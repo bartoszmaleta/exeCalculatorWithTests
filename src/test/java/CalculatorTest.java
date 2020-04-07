@@ -40,4 +40,11 @@ class CalculatorTest {
             Calculator.calculate("");
         });
     }
+
+    @Test
+    void testCalculateNull() {
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            Calculator.calculate(null);
+        });
+    }
 }
